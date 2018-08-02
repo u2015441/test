@@ -10,8 +10,8 @@ print("Enter The Value")
 value = input()
 my_list1 = ['Lahore', 'Pakistan', 'Karachi', 'Peshawar', 'Quetta']
 if search_word(value, my_list1):
-    print("True")
+    print("True ")
 else:
-    print("False")
+    print("False ")
 
 
