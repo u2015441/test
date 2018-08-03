@@ -7,8 +7,6 @@ def search_word(element, my_list):
 
 print("Enter The Value")
 value = input()
-my_list1 = ['Lahore', 'Pakistan', 'Karachi', 'Peshawar', 'Quetta']
+f = open("list.txt", "rt")
+my_list1 = [words for lines in f for words in lines.split()]
 print(search_word(value, my_list1))
-
-
-
