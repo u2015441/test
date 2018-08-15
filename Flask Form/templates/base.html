@@ -1,0 +1,53 @@
+<html>
+   <head>
+      {% if title %}
+      <title>{{ title }} - Microblog</title>
+      {% else %}
+      <title>Welcome to Microblog</title>
+      {% endif %}
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <style>
+         .center {
+         margin: auto;
+         width: 60%;
+         border: 3px solid #73AD21;
+         padding: 10px;
+         }
+         .input {
+         margin-top: 5px;
+         margin-bottom: 5px;
+         display:inline-block;
+         *display: inline;     /* for IE7*/
+         zoom:1;              /* for IE7*/
+         vertical-align:middle;
+         margin-left:20px
+         }
+         .label {
+         font-size: 16px;
+         color: black;
+         display: inline-block;
+         width: 110px;
+         text-align: right;
+         }
+      </style>
+   </head>
+   <body background="/hello.jpg">
+      <nav class="navbar navbar-default">
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <a class="navbar-brand" >Forum</a>
+            </div>
+            <ul class="nav navbar-nav">
+               <li class="active"><a href="/index">Home</a></li>
+               <li class="active"><a href="/data">Data</a></li>
+            </ul>
+         </div>
+      </nav>
+      <hr>
+      {% block content %}{% endblock %}
+   </body>
+</html>

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="center">
+   <h1>Submit Forum</h1>
+   <form action="/register"  method="post" novalidate>
+      {{ form.hidden_tag() }}
+      <div class="label">
+         {{ form.username.label }}
+      </div>
+      <div class="input" >
+          {{ form.username(size=32) }}
+      </div>
+      <br>
+      <div class="label">
+          {{ form.email.label }}
+      </div>
+      <div class="input" >
+          {{ form.email(size=45) }}
+      </div>
+      <br>
+      <div class="label">
+          {{ form.phone.label }}
+      </div>
+      <div class="input" >
+          {{ form.phone(size=12) }}
+      </div>
+      <br>
+      <div class="label">
+          {{ form.age.label }}
+      </div>
+      <div class="input" >
+          {{ form.age(size=3) }}
+      </div>
+      <br>
+       <div class="label">
+           {{ form.company.label }}
+       </div>
+      <div class="input" >
+          {{ form.company(size=20) }}
+      </div>
+      <br>
+      {{ form.submit() }}
+   </form>
+</div>
+{% endblock %}
