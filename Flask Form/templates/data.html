@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul>
+    {% for message in messages %}
+    <li>
+        {{ message }}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>UserName</th>
+            <th>Email</th>
+            <th>Phone No.</th>
+            <th>Age</th>
+            <th>Company</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for u in user %}
+        <tr>
+            <td>{{u.username}}</td>
+            <td>{{u.email}}</td>
+            <td>{{u.phone}}</td>
+            <td>{{u.age}}</td>
+            <td>{{u.company}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
